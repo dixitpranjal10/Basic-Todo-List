@@ -1,0 +1,155 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #6a11cb;
+}
+
+button {
+    padding: 15px 20px;
+    margin-left: 10px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2575fc;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+li.completed {
+    background-color: #d1e7fd;
+    text-decoration: line-through;
+    color: #555;
+}
+
+li button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #ff1c1c;
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme-switcher label {
+    margin-right: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Light Theme */
+body.light-theme {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+body.light-theme .container {
+    background: white;
+    color: #333;
+}
+
+body.light-theme input[type="text"] {
+    background-color: white;
+    color: #333;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background: linear-gradient(to right, #141E30, #243B55);
+}
+
+body.dark-theme .container {
+    background: #2c3e50;
+    color: white;
+}
+
+body.dark-theme input[type="text"] {
+    background-color: #34495e;
+    color: white;
+}
+
+body.dark-theme li {
+    background-color: #3d566e;
+    border-color: #4b6584;
+}
+
+body.dark-theme li.completed {
+    background-color: #1abc9c;
+    color: #ecf0f1;
+}
